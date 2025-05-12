@@ -1,0 +1,76 @@
+🔧 Step-by-Step: Install Windows Server and Set Up Domain Controller
+## Install Windows Server OS ##
+*Boot from the Windows Server installation media (DVD or ISO).
+
+**Select language, time, and keyboard → Click Next.
+
+***Click Install Now.
+
+****Choose the version (e.g., Windows Server 2019 Standard (Desktop Experience)).
+
+*****Accept the license terms.
+
+******Select Custom installation and choose the hard drive partition.
+
+*******Let the setup complete and create the Administrator password.
+
+
+## Install Active Directory Domain Services (AD DS) ##
+Open Server Manager → Click Add roles and features.
+
+Click Next through the wizard until you reach Server Roles.
+
+Select Active Directory Domain Services → Click Add Features.
+
+Continue and click Install (no need to restart yet).
+
+## Promote Server to Domain Controller ##
+After installation, click the flag notification (top-right) → Promote this server to a domain controller.
+
+Choose:
+
+Add a new forest
+
+Enter Root domain name (e.g., mycompany.local)
+
+Set DSRM password (used for AD recovery).
+
+Leave defaults for DNS and NetBIOS name.
+
+Let the system check prerequisites → Click Install.
+
+The server will restart automatically.
+
+
+
+
+## Verify Domain Controller Setup ##
+After restart:
+
+Log in using the domain (e.g., MYCOMPANY\Administrator).
+
+Open Server Manager → Tools → Active Directory Users and Computers.
+
+You should see your domain and default OUs.
+
+Also check DNS Manager and Group Policy Management tools.
+
+
+
+
+## Your Domain Controller is Now Ready! ##
+You can now:
+
+Add client PCs to the domain.
+
+Create users, groups, and OUs.
+
+Apply Group Policies.
+
+Set up shared folders and printers.
+
+
+
+
+
+
